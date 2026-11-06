@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10243a"><meta name="description" content="ระบบบันทึกข้อมูลสำรวจด้านเทคโนโลยีสารสนเทศ">
+<link rel="stylesheet" href="styles.css">
+<title>IT Survey | ระบบสำรวจข้อมูล</title>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="brandmark">IT</div><div><strong>IT SURVEY</strong><small>ระบบบันทึกข้อมูลด้านเทคโนโลยีสารสนเทศ</small></div></div>
+  <div class="top-actions"><span class="offline"><i></i> บันทึกในเบราว์เซอร์ของเครื่องนี้</span><button id="exportBtn" class="btn primary">ส่งออก Excel</button></div>
+</header>
+<main class="wrap">
+  <section class="intro"><div><div class="eyebrow">INFORMATION TECHNOLOGY</div><h1>แบบสำรวจสถานภาพด้านเทคโนโลยีสารสนเทศ</h1><p>บันทึกและจัดการข้อมูลได้โดยไม่ต้องเชื่อมต่อเซิร์ฟเวอร์</p></div><div class="total"><b id="totalCount">0</b><span>รายการทั้งหมด</span></div></section>
+  <section class="stats" id="stats"></section>
+  <section class="panel">
+    <div class="panel-head"><div><h2>รายการข้อมูลสำรวจ</h2><p>เลือกหมวดข้อมูลเพื่อดู เพิ่ม แก้ไข หรือลบรายการ</p></div><button id="addBtn" class="btn primary">＋ เพิ่มรายการ</button></div>
+    <nav id="tabs" class="tabs"></nav>
+    <div class="toolbar"><div class="search"><span>⌕</span><input id="search" placeholder="ค้นหาในรายการ..." autocomplete="off"></div><span id="recordCount" class="muted"></span></div>
+    <div id="list" class="list"></div>
+  </section>
+  <footer>ข้อมูลถูกเก็บไว้ในเบราว์เซอร์ของอุปกรณ์นี้ · ไม่มีการส่งข้อมูลออกไปยังเซิร์ฟเวอร์</footer>
+</main>
+<div id="modal" class="modal hidden"><div class="modal-card"><div class="modal-head"><div><div class="eyebrow">DATA ENTRY</div><h2 id="modalTitle">เพิ่มรายการ</h2></div><button id="closeModal" class="icon-btn" aria-label="ปิด">✕</button></div><form id="entryForm"><div id="fields" class="fields"></div><div class="modal-foot"><button type="button" id="cancelBtn" class="btn ghost">ยกเลิก</button><button type="submit" class="btn primary">บันทึกข้อมูล</button></div></form></div></div>
+<div id="toast" class="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
+<script src="app.js"></script>
+</body></html>
